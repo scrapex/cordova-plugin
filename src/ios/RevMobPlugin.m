@@ -15,7 +15,7 @@
 
 
 NSString* SDK_NAME = @"cordova-ios";
-NSString* SDK_VERSION = @"9.0.3";
+NSString* SDK_VERSION = @"9.0.7";
 
 RevMobFullscreen *fullscreenAd, *video, *rewardedVideo;
 
@@ -153,12 +153,6 @@ RevMobFullscreen *fullscreenAd, *video, *rewardedVideo;
     [self eventCallbackSuccess:@"AD_DISMISSED" :command];
 }
 
-
-- (void)openButton:(CDVInvokedUrlCommand *)command {
-    [self openLink];
-}
-
-
 - (void)openLink:(CDVInvokedUrlCommand *)command {
     RevMobAdLink *link = [[RevMobAds session] adLink];
     [link loadWithSuccessHandler:^(RevMobAdLink *link) {
@@ -167,6 +161,10 @@ RevMobFullscreen *fullscreenAd, *video, *rewardedVideo;
     } andLoadFailHandler:^(RevMobAdLink *link, NSError *error) {
         [self eventCallbackError:@"AD_NOT_RECEIVED" :command];
     }];
+}
+
+- (void)openButton:(CDVInvokedUrlCommand *)command {
+    [self openLink: command];
 }
 
 - (void)setTestingMode:(CDVInvokedUrlCommand*)command {

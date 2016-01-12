@@ -12,6 +12,11 @@ cordova plugin add https://github.com/RevMob/cordova-plugin
 ```
 Then copy the index.html file from the plugin's ```example``` folder to ```HelloWorld/www/```
 
+To create the projects for each platform, use the commands below:
+```
+phonegap run ios - Creates Xcode project. You might need to add the CoreLocation framework to your project.
+phonegap run android
+```
 ---
 ### Other RevMob Cordova plugins
 - [RevMob Cordova Plugin by cranberrygame](https://github.com/cranberrygame/cordova-plugin-ad-revmob) - Recently updated

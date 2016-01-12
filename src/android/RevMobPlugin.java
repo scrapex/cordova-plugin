@@ -12,7 +12,7 @@ import android.util.Log;
 import com.revmob.RevMob;
 import com.revmob.RevMobAdsListener;
 import com.revmob.RevMobTestingMode;
-import com.revmob.ads.fullscreen.RevMobFullscreen;
+import com.revmob.ads.interstitial.RevMobFullscreen;
 import com.revmob.client.RevMobClient;
 
 
@@ -20,7 +20,7 @@ public class RevMobPlugin extends CordovaPlugin {
 	private RevMob revmob;
 	private RevMobFullscreen video, fullscreen, rewardedVideo;
 	public static final String SDK_NAME = "cordova-android";
-	public static final String SDK_VERSION = "9.0.3";
+	public static final String SDK_VERSION = "9.0.7";
 	private CallbackContext lastCallbackContext = null;
 	
 	RevMobAdsListener revmobListener = new RevMobAdsListener() {
